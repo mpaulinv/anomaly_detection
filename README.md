@@ -61,6 +61,8 @@ The visualization demonstrates:
 1. **Raw Data** → **Feature Engineering** → **Model Training** → **Model Persistence**
 2. **API Request** → **Feature Extraction** → **Model Prediction** → **Anomaly Detection** → **Response**
 
+For replication please execute model_training.py then API.py 
+
 ## Installation and Setup
 
 ### Prerequisites
