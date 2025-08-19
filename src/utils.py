@@ -491,8 +491,15 @@ def log_comprehensive_model_metrics(model_name, y_true, y_pred, anomalies_df, va
             residuals = y_true - y_pred
             mlflow.log_metric("residual_mean", residuals.mean())
             mlflow.log_metric("residual_std", residuals.std())
-            mlflow.log_metric("residual_skew", residuals.skew())
-            mlflow.log_metric("residual_kurtosis", residuals.kurtosis())
+            
+            # Convert to pandas Series for skewness and kurtosis calculations
+            try:
+                residuals_series = pd.Series(residuals)
+                mlflow.log_metric("residual_skew", residuals_series.skew())
+                mlflow.log_metric("residual_kurtosis", residuals_series.kurtosis())
+            except Exception as e:
+                # Log a warning if skew/kurtosis calculation fails
+                mlflow.log_param("skew_kurtosis_error", str(e))
         else:
             rmse = mae = mape = None
             residuals = None

@@ -118,14 +118,6 @@ def main(model_type='random_forest'):
             logging.info(f"Calculated training residual standard deviation: {residual_std:.4f}")
             logging.info(f"This will be used as the anomaly threshold base in the API")
             
-            # Log comprehensive metrics (this will start its own MLflow run)
-            log_comprehensive_model_metrics(
-                predictions=rf_predictions,
-                actual=test_features['value'].values,
-                anomalies=rf_anomalies,
-                model_name='RandomForest_Final'
-            )
-            
             # Save the Random Forest model for API
             rf_params = {
                 'model_type': 'RandomForestRegressor',
@@ -135,6 +127,19 @@ def main(model_type='random_forest'):
                 'residual_std': residual_std,
                 'features': feature_cols_to_use
             }
+            
+            # Log comprehensive metrics (this will start its own MLflow run)
+            log_comprehensive_model_metrics(
+                model_name='RandomForest_Final',
+                y_true=test_features['value'].values,
+                y_pred=rf_predictions,
+                anomalies_df=rf_anomalies,
+                validation_df=test_features,
+                value_col='value',
+                timestamp_col='timestamp',
+                model_params=rf_params,
+                model_object=rf_model
+            )
             
             rf_training_stats = {
                 'anomaly_count': len(rf_anomalies),
