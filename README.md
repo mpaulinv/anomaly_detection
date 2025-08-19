@@ -14,7 +14,7 @@ This project implements an end-to-end anomaly detection system for time-series s
 
 ## Dataset Description
 
-The dataset contains sensor readings from a single temperature sensor (TEMP-01) with the following characteristics:
+The train dataset contains sensor readings from a single temperature sensor (TEMP-01) with the following characteristics:
 
 - **Time Range**: August 1-21, 2025 (21 days)
 - **Frequency**: 1-minute intervals (30,240 total observations)
