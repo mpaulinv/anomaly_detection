@@ -1,29 +1,29 @@
+### config file for the project. 
+#   
+# File paths
+TRAIN_DATA_PATH = "data/sensor_data_train.csv"
+TEST_DATA_PATH = "data/sensor_data_test.csv"
+FEATURED_TRAIN_PATH = "data/featured_sensor_data_train.csv"
+FEATURED_TEST_PATH = "data/featured_sensor_data_test.csv"
 
-### config. Elaborado por Mario Paulín como parte del proyecto agritech  
-# Rutas de archivos
-DATA_RAW_PATH = "data/yield_df.csv"
-DATA_CLEAN_PATH = "data/maize_cleaned.csv"
-LOG_PATH = "logs/data_pipeline.log"
-KAGGLE_DATASET = "patelris/crop-yield-prediction-dataset"
-MODEL_PATH = "model/model_rf_final.joblib"
-FEATURES_PATH = "model/features_rf_area.txt"
-DATA_PATH = "data/feature_engineered_data.csv"
-DATA_CLEAN_PATH = "data/maize_cleaned.csv"
-FEATURED_DATA_PATH = "data/feature_engineered_data.csv"
-LOG_FEATURE_PATH = "logs/feature_engineering_pipeline.log"
+LOG_EDA_PATH = "logs/anomaly_detection_eda.log"
+LOG_FEATURE_PATH = "logs/anomaly_detection_feature.log"
+LOG_MODEL_SELECTION_PATH = "logs/model_selection.log"
+MODEL_PATH = "model/anomaly_model.joblib"
+FEATURES_PATH = "model/features.txt"
+LOG_MODEL_TRAINING_PATH = "logs/model_training.log"
+MODEL_SAVE_PATH = "models/random_forest"
 
-# Columnas 
-CONTINUOUS_COLUMNS = ['rain_fall_mean', 'pesticides_mean', 'avg_temp_median']
+# Parameters for rolling window model 
+WINDOW_SIZE = 60  # Size of rolling window for statistics
+THRESHOLD_MULTIPLIER = 3.0  # Number of std deviations for anomaly threshold
 
-# Parámetros de BoxCox
-LAMBDA_RAIN = 0.46461002838902316
-LAMBDA_PEST = 0.09023987209681697
-LAMBDA_TEMP = 1.2687660894233703
-
-# Parámetros del modelo Random Forest
-N_ESTIMATORS = 550
+# Model parameters (random forest model)
+N_ESTIMATORS = 100
 MAX_DEPTH = None
-MIN_SAMPLES_SPLIT = 2
-MIN_SAMPLES_LEAF = 1
-MAX_FEATURES = 2
 RANDOM_STATE = 42
+rf_feature_cols = ['hour', 'minute']
+anomaly_threshold_std=3
+
+# Other configuration
+SAVE_RESULTS_PATH = "results/anomaly_results.csv"
