@@ -395,17 +395,6 @@ models/random_forest/
 
 ## Future Enhancements
 
-### Planned Features
-
-1. **Multi-Sensor Support**: Extend API to handle multiple sensor types
-2. **Advanced Models**: Implement LSTM/Transformer models for complex temporal patterns
-3. **Real-time Retraining**: Automated model updates with new data
-4. **Alert System**: Integration with notification systems for critical anomalies
-5. **Dashboard**: Web interface for monitoring and visualization
-6. **Data Drift Detection**: Monitor for changes in data patterns over time
-
-### Research Directions
-
 - **Ensemble Methods**: Combine multiple anomaly detection approaches
 - **Explainable AI**: Add interpretability features for anomaly explanations
 - **Adaptive Thresholds**: Dynamic threshold adjustment based on historical context
