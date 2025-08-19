@@ -94,7 +94,7 @@ Key dependencies include:
 1. **Clone the repository**:
 `bash
 git clone <repository-url>
-cd factory_os
+cd anomaly_detection
 `
 
 2. **Create and activate virtual environment**:
