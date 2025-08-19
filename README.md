@@ -1,4 +1,4 @@
-﻿﻿## Factory OS Anomaly Detection System
+## Factory OS Anomaly Detection System
 
 A production-ready anomaly detection system for industrial sensor data using machine learning. This system provides real-time anomaly detection through a REST API and comprehensive model training pipeline with experiment tracking.
 
