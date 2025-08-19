@@ -1,4 +1,4 @@
-﻿# Factory OS Anomaly Detection System
+﻿﻿# Factory OS Anomaly Detection System
 
 A production-ready anomaly detection system for industrial sensor data using machine learning. This system provides real-time anomaly detection through a REST API and comprehensive model training pipeline with experiment tracking.
 
@@ -23,6 +23,18 @@ The dataset contains sensor readings from a single temperature sensor (TEMP-01) 
 - **Sensor ID**: TEMP-01 (single sensor deployment)
 
 The data exhibits pronounced temporal patterns with values typically starting low in the morning, rising towards midday, and decreasing in the afternoon, making time-series analysis techniques highly appropriate.
+
+## Results Visualization
+
+The following chart shows the validation data with detected anomalies highlighted in red:
+
+![Validation Data with Anomalies](results/test_anomalies_rf.png)
+
+The visualization demonstrates:
+- **Normal patterns**: Clear daily sinusoidal temperature cycles
+- **Detected anomalies**: Red dots indicating significant deviations from expected patterns
+- **Model effectiveness**: The 2.5x residual standard deviation threshold successfully captures genuine outliers
+- **Temporal distribution**: Anomalies detected across different time periods, showing model robustness
 
 ## Architecture
 
@@ -386,6 +398,7 @@ models/random_forest/
 ### Planned Features
 
 1. **Multi-Sensor Support**: Extend API to handle multiple sensor types
+2. **Advanced Models**: Implement LSTM/Transformer models for complex temporal patterns
 3. **Real-time Retraining**: Automated model updates with new data
 4. **Alert System**: Integration with notification systems for critical anomalies
 5. **Dashboard**: Web interface for monitoring and visualization
@@ -403,3 +416,7 @@ models/random_forest/
 **Status**: Production Ready  
 **Last Updated**: August 2025  
 **Version**: 1.0.0
+
+## License
+
+This project is licensed under the MIT License.
