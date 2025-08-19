@@ -26,15 +26,15 @@ The data exhibits pronounced temporal patterns with values typically starting lo
 
 ## Results Visualization
 
-The following chart shows the validation data with detected anomalies highlighted in red. The model successfully identifies outliers that deviate from the expected daily temperature patterns:
+The following chart shows the validation data with detected anomalies highlighted in red:
 
 ![Validation Data with Anomalies](results/validation_anomalies.png)
 
-As shown in the visualization:
-- **Normal patterns**: The data follows a clear daily sinusoidal cycle
-- **Detected anomalies**: Red dots indicate values that significantly deviate from expected patterns
-- **Temporal distribution**: Anomalies are detected across different time periods, showing the model's robustness
-- **Threshold effectiveness**: The 2.5x residual standard deviation threshold successfully captures genuine outliers
+The visualization demonstrates:
+- **Normal patterns**: Clear daily sinusoidal temperature cycles
+- **Detected anomalies**: Red dots indicating significant deviations from expected patterns
+- **Model effectiveness**: The 2.5x residual standard deviation threshold successfully captures genuine outliers
+- **Temporal distribution**: Anomalies detected across different time periods, showing model robustness
 
 ## Architecture
 
@@ -428,3 +428,4 @@ This project is licensed under the MIT License.
 ## Contact
 
 For questions or support, please contact the development team or open an issue in the repository.
+
