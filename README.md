@@ -73,7 +73,7 @@ The visualization demonstrates:
 
 Create a requirements.txt file by running:
 
-`ash
+`bash
 pip freeze > requirements.txt
 `
 
@@ -90,25 +90,25 @@ Key dependencies include:
 ### Installation Steps
 
 1. **Clone the repository**:
-`ash
+`bash
 git clone <repository-url>
 cd factory_os
 `
 
 2. **Create and activate virtual environment**:
-`ash
+`bash
 python -m venv venv
 venv\Scripts\activate  # Windows
 # source venv/bin/activate  # Linux/Mac
 `
 
 3. **Install dependencies**:
-`ash
+`bash
 pip install -r requirements.txt
 `
 
 4. **Create necessary directories**:
-`ash
+`bash
 mkdir data models logs results
 `
 
