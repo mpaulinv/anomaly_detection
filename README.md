@@ -33,7 +33,7 @@ The following chart shows the validation data with detected anomalies highlighte
 The visualization demonstrates:
 - **Normal patterns**: Clear daily sinusoidal temperature cycles
 - **Detected anomalies**: Red dots indicating significant deviations from expected patterns
-- **Model effectiveness**: The 2.5x residual standard deviation threshold successfully captures genuine outliers
+- **Model effectiveness**: The 3x residual standard deviation threshold successfully captures genuine outliers
 - **Temporal distribution**: Anomalies detected across different time periods, showing model robustness
 
 ## Architecture
@@ -118,7 +118,7 @@ mkdir data models logs results
 
 Process raw sensor data to extract temporal and statistical features:
 
-`ash
+`bash
 python src/feature_engineering.py
 `
 
@@ -131,7 +131,7 @@ python src/feature_engineering.py
 
 Train the anomaly detection model with comprehensive evaluation:
 
-`ash
+`bash
 python src/model_training.py
 `
 
@@ -147,7 +147,7 @@ python src/model_training.py
 
 Explore different anomaly detection approaches:
 
-`ash
+`bash
 python scripts/model_selection.py
 `
 
@@ -162,7 +162,7 @@ python scripts/model_selection.py
 
 Start the FastAPI server for real-time anomaly detection:
 
-`ash
+`bash
 python src/API.py
 `
 
@@ -178,7 +178,7 @@ python src/API.py
 
 Launch MLflow UI to view experiment results:
 
-`ash
+`bash
 mlflow ui
 `
 
@@ -188,7 +188,7 @@ mlflow ui
 
 ### Single Prediction
 
-`ash
+`bash
 curl -X POST "http://localhost:8000/predict" \
      -H "Content-Type: application/json" \
      -d '{
@@ -200,7 +200,7 @@ curl -X POST "http://localhost:8000/predict" \
 
 ### Batch Prediction
 
-`ash
+`bash
 curl -X POST "http://localhost:8000/predict/batch" \
      -H "Content-Type: application/json" \
      -d '[
