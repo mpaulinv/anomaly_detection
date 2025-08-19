@@ -28,7 +28,7 @@ The data exhibits pronounced temporal patterns with values typically starting lo
 
 The following chart shows the validation data with detected anomalies highlighted in red:
 
-![Validation Data with Anomalies](results/validation_anomalies.png)
+![Validation Data with Anomalies](results/test_anomalies_rf.png)
 
 The visualization demonstrates:
 - **Normal patterns**: Clear daily sinusoidal temperature cycles
@@ -428,4 +428,5 @@ This project is licensed under the MIT License.
 ## Contact
 
 For questions or support, please contact the development team or open an issue in the repository.
+
 
