@@ -22,7 +22,7 @@ The train dataset contains sensor readings from a single temperature sensor (TEM
 - **Pattern**: Strong daily cyclical behavior with sinusoidal temperature patterns
 - **Sensor ID**: TEMP-01 (single sensor deployment)
 
-The data exhibits pronounced temporal patterns with values typically starting low in the morning, rising towards midday, and decreasing in the afternoon, making time-series analysis techniques highly appropriate.
+The data exhibits pronounced temporal patterns with values typically starting low in the morning, rising towards midday, and decreasing in the afternoon.
 
 ## Results Visualization
 
